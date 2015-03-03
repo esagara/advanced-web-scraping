@@ -22,8 +22,10 @@ increment = 1
   #to the __EVENTTARGET field - a 1 for the first time through. The key to figur
   #out how this works is manually paging through the first few pages of a website
   #and seeing how the form values change in the web inspector as you move from one page to another.
-  form.add_field!('__EVENTTARGET','ctl00$ContentPlaceHolder1$pnlBottom'+increment.to_s)
-  #We submit the form with the new __EVENTTARGET variable
+  form.add_field!('__EVENTTARGET','ctl00$ContentPlaceHolder1$pnlBottom' + increment.to_s)
+  #we also have to designate the time period we want to search for, again we get that from the web inspector
+  form.add_field!('ctl00$ContentPlaceHolder1$ddlTimePeriod','2014^31-DEC-2014^02-MAR-2015')
+  #We submit the form with the new __EVENTTARGET and time period variables
   page = browser.submit(form)
   #Load the response into an HTML parser
   html = Nokogiri::HTML(page.body)
