@@ -7,5 +7,7 @@ Requirements
 ------------
 
 ###Python
+The Python scrapes require only two modules not included with Python standard library. [BeautifulSoup4](http://www.crummy.com/software/BeautifulSoup/) is a module for parsing markdown languages such as HTML and XML. [Requests](http://docs.python-requests.org/en/latest/) is used to make both get and post web requests.
+Both can be installed individually using ```pip``` or together using ```pip install -r requirements.txt```. 
 
 ###Ruby
