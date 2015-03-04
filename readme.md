@@ -11,3 +11,5 @@ The Python scrapes require only two modules not included with Python standard li
 Both can be installed individually using ```pip``` or together using ```pip install -r requirements.txt```. 
 
 ###Ruby
+The Ruby scripts require three different libraries. The first is [Nokogiri](http://www.nokogiri.org/), Ruby's parser for HTML and XML. The ASP.NET scrape requires [Mechanize](http://www.rubydoc.info/gems/mechanize/Mechanize) to emulate a browser. [Rest-Client](http://www.rubydoc.info/gems/rest-client/1.7.3) is needed to make web requests in the mapscrape.rb example.
+If you have [Bundler](http://bundler.io/) installed you can simply navigated to the Ruby directory and use ```bundle install``` to install the required libraries. Otherwise, use ```gem install <package name>```.
